@@ -102,11 +102,11 @@
 
             display-name = "adjust";
             bindings = <
-&trans  &trans  &trans  &trans  &trans        &trans                        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans        &trans                        &none   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans        &trans                        &none   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans        &trans        &none    &none  &none   &trans  &trans  &trans  &trans  &trans
-                &none   &none   &kp NUMBER_2  &kp NUMBER_1  &none    &none  &none   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &none   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &none   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none    &none  &none   &trans  &trans  &trans  &trans  &trans
+                &none   &none   &kp N2  &kp N1  &none    &none  &none   &trans  &trans  &trans
             >;
         };
     };
