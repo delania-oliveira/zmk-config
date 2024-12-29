@@ -19,7 +19,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        adjust_layer {
+        game_layer {
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
         };
