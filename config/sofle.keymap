@@ -16,14 +16,7 @@
 / {
     // Activate ADJUST layer by pressing raise and lower
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        game_layer {
-            if-layers = <LOWER RAISE>;
-            then-layer = <ADJUST>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -39,11 +32,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC         &kp N1  &kp N2    &kp N3        &kp N4     &kp N5                            &kp N6      &kp N7    &kp N8        &kp N9          &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W     &kp E         &kp R      &kp T                             &kp Y       &kp U     &kp I         &kp O           &kp P     &kp DEL
-&kp LEFT_SHIFT  &kp A   &kp S     &kp D         &kp F      &kp G                             &kp H       &kp J     &kp K         &kp L           &kp SEMI  &kp SQT
-&tog 3          &kp Z   &kp X     &kp C         &kp V      &kp B      &none      &kp C_MUTE  &kp N       &kp M     &kp COMMA     &kp DOT         &kp FSLH  &kp RSHFT
-                        &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &mo LOWER  &kp RET    &kp SPACE   &tog RAISE  &kp CAPS  &kp UP_ARROW  &kp DOWN_ARROW
+&kp ESC         &kp N1  &kp N2    &kp N3        &kp N4     &kp N5                              &kp N6      &kp N7    &kp N8        &kp N9          &kp N0    &kp BACKSPACE
+&kp TAB         &kp Q   &kp W     &kp E         &kp R      &kp T                               &kp Y       &kp U     &kp I         &kp O           &kp P     &kp DEL
+&kp LEFT_SHIFT  &kp A   &kp S     &kp D         &kp F      &kp G                               &kp H       &kp J     &kp K         &kp L           &kp SEMI  &kp SQT
+&tog 3          &kp Z   &kp X     &kp C         &kp V      &kp B      &none        &kp C_MUTE  &kp N       &kp M     &kp COMMA     &kp DOT         &kp FSLH  &kp RSHFT
+                        &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &mo LOWER  &kp SPACE    &kp RET     &tog RAISE  &kp CAPS  &kp UP_ARROW  &kp DOWN_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -82,11 +75,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_SUBTRACT  &kp N0       &trans
-&trans      &trans        &kp K_CMENU   &kp UP        &trans        &trans                          &trans  &kp N7         &kp N8           &kp N9           &kp KP_PLUS  &kp KP_ENTER
-&trans      &trans        &kp LEFT      &kp DOWN      &kp RIGHT     &trans                          &trans  &kp N4         &kp N5           &kp N6           &trans       &trans
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans  &kp N1         &kp N2           &kp N3           &trans       &trans
-                          &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans         &trans           &trans
+&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_SUBTRACT  &kp N0       &trans
+&trans      &trans          &kp K_CMENU   &kp UP        &trans        &trans                          &trans  &kp N7         &kp N8           &kp N9           &kp KP_PLUS  &kp KP_ENTER
+&trans      &trans          &kp LEFT      &kp DOWN      &kp RIGHT     &trans                          &trans  &kp N4         &kp N5           &kp N6           &trans       &trans
+&trans      &kp LC(K_UNDO)  &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans  &kp N1         &kp N2           &kp N3           &trans       &trans
+                            &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans         &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -102,11 +95,11 @@
 
             display-name = "adjust";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &none   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &none   &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none    &none  &none   &trans  &trans  &trans  &trans  &trans
-                &none   &none   &kp N2  &kp N1  &none    &none  &none   &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none     &none   &trans  &trans  &trans  &trans  &trans  &trans
+                &none   &none   &kp N2  &kp N1  &trans    &trans  &none   &trans  &trans  &trans
             >;
         };
     };
