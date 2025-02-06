@@ -54,24 +54,14 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&none      &none            &none          &none          &none          &none                        &none                 &none                  &none              &none             &none             &none
-&kp LC(C)  &kp EXCLAMATION  &kp AT         &kp HASH       &kp DOLLAR     &kp CARET                    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH      &kp SLASH         &kp UNDERSCORE    &kp SEMI
-&kp LC(V)  &kp LC(D)        &kp AMPERSAND  &kp ASTERISK   &kp PERCENT    &kp TILDE                    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp EQUAL         &trans
-&kp LC(X)  &kp LC(Z)        &kp LC(Y)      &kp LC(LS(R))  &kp LS(LG(S))  &kp GRAVE  &trans    &trans  &kp LBKT              &kp RBKT               &kp PLUS           &kp MINUS         &kp LEFT_COMMAND  &trans
-                            &none          &none          &trans         &trans     &trans    &trans  &trans                &trans                 &none              &none
+&none          &none            &none          &none         &none        &none                               &none                 &none                  &none              &none      &none             &none
+&kp LS(LG(S))  &kp EXCLAMATION  &kp AT         &kp HASH      &kp DOLLAR   &kp CARET                           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH      &kp SLASH  &kp SEMI          &none
+&kp LC(A)      &kp LC(D)        &kp AMPERSAND  &kp ASTERISK  &kp PERCENT  &kp TILDE                           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &kp UNDER  &kp EQUAL         &none
+&kp LS(A)      &kp LC(Z)        &kp LC(X)      &kp LC(C)     &kp LC(V)    &kp SINGLE_QUOTE  &trans    &trans  &kp LBKT              &kp RBKT               &kp PLUS           &kp MINUS  &kp LEFT_COMMAND  &none
+                                &none          &none         &trans       &trans            &trans    &trans  &trans                &trans                 &none              &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
-
-        mac-keybinds {
-            bindings = <
-&none   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans   &trans   &trans
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans   &trans
-                &none   &none   &trans  &trans  &trans    &trans  &trans  &trans  &none   &none
-            >;
         };
 
         raise_layer {
@@ -85,14 +75,24 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&none   &none   &none        &none         &none         &none                          &trans           &none   &none   &none   &none         &trans
-&trans  &trans  &kp K_CMENU  &kp UP        &trans        &trans                         &kp KP_MINUS     &kp N7  &kp N8  &kp N9  &kp N0        &trans
-&trans  &trans  &kp LEFT     &kp DOWN      &kp RIGHT     &trans                         &kp KP_MULTIPLY  &kp N4  &kp N5  &kp N6  &kp KP_PLUS   &trans
-&trans  &trans  &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &kp K_CMENU  &trans    &trans  &kp KP_SLASH     &kp N1  &kp N2  &kp N3  &kp KP_ENTER  &trans
-                &none        &none         &trans        &trans       &trans    &trans  &trans           &trans  &none   &none
+&none   &none  &none       &none         &none         &none                          &none            &none   &none   &none   &none         &none
+&none   &none  &none       &kp UP        &none         &none                          &kp KP_MINUS     &kp N7  &kp N8  &kp N9  &kp N0        &trans
+&none   &none  &kp LEFT    &kp DOWN      &kp RIGHT     &none                          &kp KP_MULTIPLY  &kp N4  &kp N5  &kp N6  &kp KP_PLUS   &trans
+&trans  &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &kp K_CMENU  &trans    &trans  &kp KP_SLASH     &kp N1  &kp N2  &kp N3  &kp KP_ENTER  &trans
+               &none       &none         &trans        &trans       &trans    &trans  &trans           &trans  &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        mac-keybinds {
+            bindings = <
+&none   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans   &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans   &trans
+                &none   &none   &trans  &trans  &trans    &trans  &trans  &trans  &none   &none
+            >;
         };
     };
 };
